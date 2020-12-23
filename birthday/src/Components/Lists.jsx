@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import people from "../data";
 const Lists = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    setData(people);
-  }, []);
+  const [data, setData] = useState(people);
+ 
   const handleClear = () => {
     setData([]);
   };

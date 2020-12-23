@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  background-color: oldlace;
+  .review {
+    .review__h1 {
+    }
+    .review__line {
+      width: 100px;
+      height: 2px;
+    }
+  }
+  .person {
+    .person__img__wrapper {
+      .person__img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
