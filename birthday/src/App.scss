@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: lightblue;
+}
+.birthday {
+  background-color: #fff;
+  width: 350px;
+  margin: auto;
+  border-radius: 10px;
+  .birthday__h1 {
+  }
+  .birthday__container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    .birthday__image {
+      margin-top: 1rem;
+      margin-left: 1rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    .birthday__text {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+      .birthday__p {
+        align-self: flex-start;
+        margin-top: -5px;
+      }
+    }
+  }
+  .btn {
+    margin-top: 3rem;
+    padding: 25px 100px 25px 100px;
+    border-radius: 10px;
+    outline: none;
+    color: brown;
+    text-align: center;
+    background-color: pink;
+  }
+  
+}
