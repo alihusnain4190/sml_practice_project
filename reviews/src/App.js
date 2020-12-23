@@ -5,8 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="review">
-        <h1 className="review__h1">Our Reviews</h1>
-
+        <span className="review__span">Our Reviews</span>
         <hr className="review__line"></hr>
       </div>
       <Person />

@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 import data from "../data";
-import SinglePerson from "./SinglePerson";
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const Person = () => {
-  const { id, name, job, image, text } = data[0];
-  const [persons, setPersons] = useState(data);
+  const [index, setIndex] = useState(0);
+  const { id, name, job, image, text } = data[index];
+  const [bool, setbool] = useState(false);
+  const handleIncrement = () => {
+    if (index < data.length - 1) setIndex(index + 1);
+  };
+  const handleDecrement = () => {
+    if (index > 0) {
+      setIndex(index - 1);
+    }
+  };
+  const hadnleSurparise = () => {
+    const number = Math.floor(Math.random() * data.length + 1);
+
+    setIndex(number - 1);
+  };
   return (
     <main className="person">
       <div className="person__img__wrapper">
@@ -16,6 +29,21 @@ const Person = () => {
       </div>
       <div className="person__text">
         <p className="person__text__p">{text}</p>
+
+        <button className="person__btn">Read More</button>
+      </div>
+      <div className="btn__container">
+        <button className="btn__left" onClick={handleDecrement}>
+          {">"}
+        </button>
+        <button className="btn__right" onClick={handleIncrement}>
+          {"<"}
+        </button>
+      </div>
+      <div className="btn__sur__container">
+        <button className="btn_sur" onClick={hadnleSurparise}>
+          Surparise Me
+        </button>
       </div>
     </main>
   );
