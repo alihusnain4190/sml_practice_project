@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const Person = () => {
   const [index, setIndex] = useState(0);
   const { id, name, job, image, text } = data[index];
-  const [bool, setbool] = useState(false);
+  const [readMore, setReadMore] = useState(false);
   const handleIncrement = () => {
     if (index < data.length - 1) setIndex(index + 1);
   };
@@ -28,9 +28,18 @@ const Person = () => {
         <p className="person__job">{job}</p>
       </div>
       <div className="person__text">
-        <p className="person__text__p">{text}</p>
+        <p className="person__text__p">
+          {readMore ? text : `${text.substr(0, 30)}`}
+        </p>
 
-        <button className="person__btn">Read More</button>
+        <button
+          className="person__btn"
+          onClick={() => {
+            setReadMore(!readMore);
+          }}
+        >
+          {readMore ? "Read More" : "Read Less"}
+        </button>
       </div>
       <div className="btn__container">
         <button className="btn__left" onClick={handleDecrement}>

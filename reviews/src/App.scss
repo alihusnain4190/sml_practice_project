@@ -43,6 +43,10 @@
       .person__btn {
         margin-right: 1rem;
         padding: 4px 2px 4px 2px;
+        background-color: $third-color;
+        border-radius: 4px;
+        color: $secondary-color;
+        margin-bottom: 1rem;
       }
     }
     .btn__container {
