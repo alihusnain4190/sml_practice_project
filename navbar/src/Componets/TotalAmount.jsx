@@ -1,7 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../context";
 const TotalAmount = () => {
-  const { total } = useGlobalContext();
+  const { total, cart } = useGlobalContext();
   return (
     <div>
       <h1>Total amount</h1>

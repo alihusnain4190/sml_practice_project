@@ -6,7 +6,12 @@ const CartContainer = () => {
   const removeData = (id) => {
     removeItem(id);
   };
-  const { cart, removeItem } = useGlobalContext();
+  const {
+    cart,
+    removeItem,
+    decrementAmount,
+    incrementAmount,
+  } = useGlobalContext();
   if (cart.length === 0) {
     return <h1>Cart is empty</h1>;
   }
@@ -25,9 +30,9 @@ const CartContainer = () => {
               <button onClick={() => removeData(id)}>Remove</button>
             </div>
             <div>
-              <button>+1</button>
+              <button onClick={() => incrementAmount(id)}>+1</button>
               <p>{amount}</p>
-              <button>-1</button>
+              <button onClick={() => decrementAmount(id)}>-1</button>
             </div>
           </div>
         );
