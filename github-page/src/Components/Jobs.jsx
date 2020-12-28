@@ -1,9 +1,38 @@
 import React from "react";
 
 const Jobs = (props) => {
-  const { id, title, type, url, company } = props.data;
+  console.log(props.data);
+  const {
+    id,
+    title,
+    type,
+    url,
+    company,
+    location,
+    created_at,
+    company_logo,
+  } = props.data;
 
-  return <div>asddddddddddddddddddddddddddddd</div>;
+  return (
+    <section id={id} className="jobs">
+      <div className="jobs--wrapper">
+        <div className="jobs--wrapper__img">
+          <img className="jobs__img" src={company_logo} alt="no image"></img>
+        </div>
+        <div className="jobs--wrapper__desp">
+          <div className="jobs__upper">
+            <h4>{company}</h4>
+            <p>{location}</p>
+            <p>{created_at}</p>
+          </div>
+          <div className="jobs__bottom">
+            <h3 className="jobs__bottom__h3"> {title}</h3>
+            <button className="btn">{type}</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Jobs;

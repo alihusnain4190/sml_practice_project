@@ -1,0 +1,28 @@
+.jobs {
+  width: 70%;
+  right: auto;
+  .jobs--wrapper {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    .jobs--wrapper__img {
+      .jobs__img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .jobs--wrapper__desp {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      flex-direction: column;
+      .jobs__upper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .jobs__bottom {
+      }
+    }
+  }
+}
