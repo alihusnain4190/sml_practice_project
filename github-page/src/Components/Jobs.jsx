@@ -1,7 +1,8 @@
 import React from "react";
-
+import { useGlobalContext } from "../Context";
+import Loading from "./Loading";
 const Jobs = (props) => {
-  console.log(props.data);
+  const { isLoading } = useGlobalContext();
   const {
     id,
     title,
@@ -13,6 +14,7 @@ const Jobs = (props) => {
     company_logo,
   } = props.data;
 
+  if (isLoading === true) return <Loading />;
   return (
     <section id={id} className="jobs">
       <div className="jobs--wrapper">

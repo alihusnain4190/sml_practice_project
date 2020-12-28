@@ -5,4 +5,8 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   @import "./style/landing";
+  .landing {
+    display: flex;
+    justify-content: flex-start;
+  }
 }

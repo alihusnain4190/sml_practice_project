@@ -25,9 +25,13 @@ const AppProvider = ({ children }) => {
       console.log(err);
     }
   };
-
+  const fetchFullJob = () => {
+    console.log("asd");
+  };
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, fetchFullJob }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 

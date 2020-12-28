@@ -1,6 +1,8 @@
 .jobs {
   width: 70%;
   right: auto;
+  display: flex;
+  flex-direction: column;
   .jobs--wrapper {
     display: flex;
     justify-content: flex-start;
