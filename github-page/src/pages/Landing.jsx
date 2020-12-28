@@ -3,6 +3,7 @@ import Loading from "../Components/Loading";
 import Jobs from "../Components/Jobs";
 import Options from "../Components/Options";
 import { useGlobalContext } from "../Context";
+import SearchJob from "../Components/SearchJob";
 const Landing = () => {
   const { isLoading, jobs } = useGlobalContext();
 
@@ -10,11 +11,12 @@ const Landing = () => {
   return (
     <main className="landing">
       <div>
-        {" "}
+        <SearchJob />
+      </div>
+      <div>
         <Options />
       </div>
       <div>
-        {" "}
         {jobs.map((j) => {
           return <Jobs data={j}></Jobs>;
         })}
