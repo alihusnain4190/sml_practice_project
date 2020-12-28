@@ -6,7 +6,6 @@
   margin-bottom: 2rem;
   @import "./style/landing";
   .landing {
-    display: flex;
-    justify-content: flex-start;
   }
+  @import "./style/home";
 }

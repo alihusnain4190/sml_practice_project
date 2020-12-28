@@ -8,7 +8,7 @@ const AppProvider = ({ children }) => {
     isLoading: false,
     jobs: [],
     full_time: false,
-    job: "asd",
+    job: "",
   };
   const [state, dispatch] = useReducer(reducer, initState);
 
@@ -18,8 +18,19 @@ const AppProvider = ({ children }) => {
   const searchJob = (job) => {
     dispatch({ type: "JOB", payload: job });
   };
-  const fetchSearchJob = () => {
-    
+  const fetchSearchJob = async (job) => {
+    const header = { headers: { "X-Requested-With": "XMLHttpRequest" } };
+    let url = `https://stark-mesa-12909.herokuapp.com/https://jobs.github.com/positions.json?location=${state.job}`;
+
+    try {
+      let res = await axios.get(url, header);
+      const jobs = res.data;
+
+      dispatch({ type: "SEARCH_JOB", payload: jobs });
+    } catch (err) {
+      dispatch({ type: "LOADING" });
+      console.log(err);
+    }
   };
   const fetchAllData = async () => {
     const header = { headers: { "X-Requested-With": "XMLHttpRequest" } };

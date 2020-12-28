@@ -6,16 +6,25 @@ const reducer = (state, action) => {
     return { ...state, isLoading: false, jobs: action.payload };
   }
   if (action.type === "FULL_JOB") {
-    return { ...state, isLoadin: false, jobs: action.payload, full_time: true };
+    return {
+      ...state,
+      isLoading: false,
+      jobs: action.payload,
+      full_time: true,
+    };
   }
   if (action.type === "SHOW_CITY") {
-    return { ...state, isLoadin: false, jobs: action.payload };
+    return { ...state, isLoading: false, jobs: action.payload };
   }
   if (action.type === "LOCATION") {
-    return { ...state, isLoadin: false, jobs: action.payload };
+    return { ...state, isLoading: false, jobs: action.payload };
   }
   if (action.type === "JOB") {
-    return { ...state, isLoadin: false, job: action.payload };
+    return { ...state, isLoading: false, job: action.payload };
+  }
+  if (action.type === "SEARCH_JOB") {
+    console.log(action.payload);
+    return { ...state, isLoading: false, jobs: action.payload };
   }
 };
 

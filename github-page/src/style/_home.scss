@@ -1,0 +1,17 @@
+.nav {
+  background: center / cover url(../img/backgroundImg.png) no-repeat;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  height: 15vh;
+  max-width: 100%;
+  padding: 0.5rem 0;
+  border: 2px solid black;
+  text-align: center;
+  .nav__input_wrapper {
+    margin-top: 6vh;
+    .nav__input {
+      width: 50%;
+      height: 30px;
+    }
+  }
+}
