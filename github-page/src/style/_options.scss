@@ -1,0 +1,69 @@
+.opt {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+
+  border: 1px solid #000;
+  .opt__checkbox__div {
+    margin-top: 2rem;
+    margin-left: -3rem;
+    input[type="checkbox"] {
+      transform: scale(2);
+      align-self: start;
+    }
+    .opt__span {
+      margin-left: 2rem;
+      font-size: 1rem;
+    }
+  }
+  .opt__input__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    input[type="text"] {
+      padding-left: 2rem;
+    }
+    .opt__location {
+      margin-left: 2rem;
+      margin-top: 1rem;
+      align-self: start;
+    }
+    .opt__search {
+      position: absolute;
+      text-align: center;
+      border-color: black;
+      color: #333;
+      width: 4%;
+      margin-top: 1.5rem;
+      margin-left: -6rem;
+      height: 30px;
+    }
+
+    .opt__input {
+      margin-top: 1rem;
+      padding: 3px;
+      width: 160%;
+      margin-left: 2rem;
+      height: 40px;
+      border-radius: 10px;
+      outline: none;
+    }
+  }
+  .radio__btn {
+    margin-top: 2rem;
+    .opt__table {
+      .opt_row {
+        .opt_td {
+          padding-top: 10px;
+          width: 1%;
+          text-align: center;
+        }
+        .opt__name {
+          margin-left: 10rem;
+
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+}

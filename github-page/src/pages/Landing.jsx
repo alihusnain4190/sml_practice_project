@@ -13,13 +13,15 @@ const Landing = () => {
       <div>
         <SearchJob />
       </div>
-      <div>
-        <Options />
-      </div>
-      <div>
-        {jobs.map((j) => {
-          return <Jobs data={j}></Jobs>;
-        })}
+      <div className="opt-job__wrapper">
+        <div className="landing__opt">
+          <Options />
+        </div>
+        <div className="landing__jobs">
+          {jobs.map((j) => {
+            return <Jobs data={j}></Jobs>;
+          })}
+        </div>
       </div>
     </main>
   );

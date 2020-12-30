@@ -2,16 +2,49 @@
   background: center / cover url(../img/backgroundImg.png) no-repeat;
   border-radius: 10px 10px 0 0;
   color: white;
-  height: 15vh;
+  height: 20vh;
   max-width: 100%;
   padding: 0.5rem 0;
   border: 2px solid black;
   text-align: center;
+
   .nav__input_wrapper {
     margin-top: 6vh;
-    .nav__input {
-      width: 50%;
-      height: 30px;
+    position: relative;
+    input[type="text"] {
+      padding-left: 3rem;
     }
+    .nav__input {
+      padding: 3px;
+      width: 50%;
+      height: 50px;
+      border-radius: 10px;
+      outline: none;
+    }
+    .nav__search {
+      position: absolute;
+      text-align: center;
+      border-color: black;
+      color: #333;
+      width: 4%;
+      height: 30px;
+      margin-top: 0.5rem;
+      margin-left: 0rem;
+    }
+    .nav__btn {
+      cursor: pointer;
+      padding: 10px 35px 10px 35px;
+      font-style: Roboto;
+      background-color: #1e86ff;
+      color: #fff;
+      font-family: Roboto;
+      height: 47px;
+      font-size: 1rem;
+      outline: none;
+      font-family: "Roboto", sans-serif;
+      
+      border-radius: 8px;
+    }
+    
   }
 }

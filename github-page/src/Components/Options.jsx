@@ -1,5 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../Context";
+import { FaSistrix } from "react-icons/fa";
+
 const Options = () => {
   const {
     fetchFullJob,
@@ -22,27 +24,33 @@ const Options = () => {
       <form>
         <div className="opt__checkbox__div">
           <input
+            className="opt_checkbox"
             type="checkbox"
             name="time"
             id="time"
             onClick={handleCheckbox}
           ></input>
-          <span>Full Time</span>
+          <span className="opt__span">Full Time</span>
         </div>
         <div className="opt__input__div">
+          <span className="opt__location">Location</span>
+          <i>
+            <FaSistrix className="opt__search"></FaSistrix>
+          </i>
           <input
             name="city"
             id="city"
             type="text"
+            className="opt__input"
             onChange={handleChange}
             placeholder="City,State,Zip code or country"
           ></input>
         </div>
         <div className="radio__btn">
-          <table>
+          <table className="opt__table">
             <tbody>
-              <tr>
-                <td>
+              <tr className="opt_row">
+                <td className="opt_td">
                   <input
                     type="radio"
                     name="london"
@@ -51,10 +59,13 @@ const Options = () => {
                     onClick={handleLondon}
                   />
                 </td>
-                <td>London</td>
-              </tr>
-              <tr>
                 <td>
+                  London
+                  {/* <span className="opt_name">London</span> */}
+                </td>
+              </tr>
+              <tr className="opt_row">
+                <td className="opt_td">
                   <input
                     type="radio"
                     name="amsterdam"
@@ -63,10 +74,13 @@ const Options = () => {
                     onClick={handleLondon}
                   ></input>
                 </td>
-                <td>Amsterdam</td>
+                <td className="opt_td">
+                  Amsterdam
+                  {/* <span className="opt_name">amsterdam</span> */}
+                </td>
               </tr>
-              <tr>
-                <td>
+              <tr className="opt_row">
+                <td className="opt_td">
                   <input
                     type="radio"
                     name="newyork"
@@ -75,10 +89,10 @@ const Options = () => {
                     value="newyork"
                   ></input>
                 </td>
-                <td>New York</td>
+                <td className="opt_td">New York</td>
               </tr>
-              <tr>
-                <td>
+              <tr className="opt_row">
+                <td className="opt_td">
                   <input
                     type="radio"
                     name="berlin"
@@ -87,7 +101,7 @@ const Options = () => {
                     onClick={handleLondon}
                   ></input>
                 </td>
-                <td>Berlin</td>
+                <td className="opt_td">Berlin</td>
               </tr>
             </tbody>
           </table>

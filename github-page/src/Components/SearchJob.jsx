@@ -15,9 +15,9 @@ const SearchJob = () => {
         }}
       >
         <div className="nav__input_wrapper">
-          <span>
-            <FaSistrix></FaSistrix>
-          </span>
+          <i>
+            <FaSistrix className="nav__search"></FaSistrix>
+          </i>
           <input
             className="nav__input"
             type="text"
@@ -29,7 +29,8 @@ const SearchJob = () => {
               searchJob(e.target.value);
             }}
           />
-          <button className="nav__btn">Submit</button>
+
+          <button className="nav__btn">Search</button>
         </div>
       </form>
     </div>
