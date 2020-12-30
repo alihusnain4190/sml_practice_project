@@ -1,4 +1,13 @@
 .landing {
   background-color: aqua;
-  @import "./options";
+  .opt-job__wrapper {
+    display: flex;
+    flex-direction: row;
+    .landing__opt {
+      @import "./options";
+    }
+    .landing__jobs {
+      @import "./jobs";
+    }
+  }
 }

@@ -23,9 +23,9 @@ const Jobs = (props) => {
         </div>
         <div className="jobs--wrapper__desp">
           <div className="jobs__upper">
-            <h4>{company}</h4>
-            <p>{location}</p>
-            <p>{created_at}</p>
+            <h5>{company}</h5>
+            <p className="jobs__upper_p">{location}</p>
+            <p className="jobs__upper_p">{created_at}</p>
           </div>
           <div className="jobs__bottom">
             <h3 className="jobs__bottom__h3"> {title}</h3>

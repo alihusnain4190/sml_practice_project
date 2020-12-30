@@ -1,0 +1,27 @@
+.jobs {
+  border-radius: 10px solid pink;
+  margin-left: 20rem;
+  .jobs--wrapper {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    .jobs--wrapper__img {
+      .jobs__img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .jobs--wrapper__desp {
+      margin-left: 1rem;
+      .jobs__upper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        .jobs__upper_p {
+          color: #333;
+        }
+      }
+    }
+  }
+}
